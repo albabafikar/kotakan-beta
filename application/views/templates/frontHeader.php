@@ -17,7 +17,7 @@
     <meta name="keywords" content="">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="<?= base_url() ?>resources/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url() ?>resources/images/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?= base_url() ?>resources/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>resources/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>resources/images/apple-touch-icon-72x72.png">

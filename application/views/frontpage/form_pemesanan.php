@@ -173,7 +173,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <h2>Lebih dari 50 Partner produk kotakan telah berkolaborasi bersama .. <br>Sekarang saatnya anda bergabung dengan kami...</h2>
-                    <a href="#" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
+                    <a href="<?= $this->kotakanPartner ?>" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end content message -->

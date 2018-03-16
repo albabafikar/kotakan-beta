@@ -114,7 +114,6 @@
                                 </div>
                                 <input type="hidden" name="__e" value="<?= $data_pemesan->email ?>">
                                 <input type="hidden" name="__n" value="<?= $data_pesanan->no_pesanan ?>">
-
                                 <hr>
                                 <div class="form-group">
                                     <div class="col-md-12 col-sm-12 col-xs-12">

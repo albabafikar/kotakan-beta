@@ -52,44 +52,26 @@ class Admin extends CI_Controller {
 						4 => array(
 								'title' => 'Menu Katering',
 								'subtitle' => 'Jumlah menu katering prasmanan.',
-								'value' => $this->getKategoriMenu(1),
+								'value' => 0,
 								'icon' => 'fa fa-cube'
 							),
 						5 => array(
-								'title' => 'Jumlah Artikel',
-								'subtitle' => 'Jumlah artikel yang disubmit.',
-								'value' => $artikel,
-								'icon' => 'fa fa-file-text-o'
-							),
-						6 => array(
 								'title' => 'Jumlah Pesanan',
 								'subtitle' => 'Jumlah pesanan yang diterima.',
-								'value' => $pesanan,
+								'value' => 0,
 								'icon' => 'fa fa-send'
 							),
+						6 => array(
+								'title' => 'Jumlah Artikel',
+								'subtitle' => 'Jumlah artikel yang disubmit.',
+								'value' => 0,
+								'icon' => 'fa fa-file-text-o'
+							),
 						7 => array(
-								'title' => 'Pesanan Menunggu',
-								'subtitle' => 'Pesanan tahap pembayaran.',
-								'value' => $this->getCountData('m_pesanan', array('status' => 2)),
-								'icon' => 'fa fa-ellipsis-h'
-							),
-						8 => array(
-								'title' => 'Pesanan Selesai',
-								'subtitle' => 'Pesanan sudah dibayar.',
-								'value' => $this->getCountData('m_pesanan', array('status' => 3)),
-								'icon' => 'fa fa-thumbs-up'
-							),
-						9 => array(
 								'title' => 'Jumlah Kontak',
 								'subtitle' => 'Jumlah kontak yang disubmit.',
-								'value' => $kontak,
+								'value' => 0,
 								'icon' => 'fa fa-envelope-o'
-							),
-						10 => array(
-								'title' => 'Jumlah Bukti Pembayaran',
-								'subtitle' => 'Bukti pembayaran yang disubmit.',
-								'value' => $bukti_pembayaran,
-								'icon' => 'fa fa-picture-o'
 							),
 					);
 				$this->indexTemplate('dashboard', $data);
@@ -308,7 +290,7 @@ class Admin extends CI_Controller {
 				if(!$getdata['method']) show_404();
 				else $this->doAction($getdata['method'], $postdata, @$_FILES);	
 			break;
-
+			
 			case 'bukti-pembayaran':
 				$getdata = $this->input->get();
 				if(isset($getdata['action'])) {
@@ -458,7 +440,6 @@ class Admin extends CI_Controller {
 
 		return $config;
   }
-
   private function getCountData($table, $condition = '') {
   	if($condition) {
   		$query = $this->QueryBuilder->select($condition, $table);

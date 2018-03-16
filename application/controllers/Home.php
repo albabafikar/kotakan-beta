@@ -298,7 +298,7 @@ class Home extends CI_Controller {
 	{
 		$this->indexTemplate('frontpage/page_404');
 	}
-
+	
 	private function insertImage($field_name) {
 		$newImageName = imageEncrypt($_FILES[$field_name]['name']);
 		$uploadDir = 'resources/uploads/payments/';

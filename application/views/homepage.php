@@ -13,11 +13,11 @@
 
         <div class="content-top">
             <div class="row">
-                <div class="col-sm-12 col-xs-12 cen-xs text-right">
+                <div class="col-sm-12 col-xs-12 cen-xs text-center">
                     <ul class="list-inline social">
-                        <li><a href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
             </div><!-- end row -->
@@ -107,14 +107,15 @@
                 <?php endforeach; ?>
             </div>
         </div>
-
+        </br>
+        </br>
         <div class="refer-messages">
             <div class="row text-center">
                 <div class="col-md-3">
                     <div class="boxes boxs">
                         <i class="fa fa-cutlery"></i>
                         <h3>Paket </br>Nasi Kotak</h3>
-                        <p>Create your account, build your store and sell your custom works with tons of clients.</p>
+                        <p>Kami menjual nasi kotak mulai dari yang sederhana dan murah sampai yang Istimewa sesuai kebutuhan anda.</p>
                         <a href="<?= base_url().'menu/nasikotak' ?>" class="btn btn-primary">Pilih Menu</a>
                     </div>
                 </div><!-- end col -->
@@ -123,7 +124,7 @@
                     <div class="boxes boxs">
                         <i class="fa fa-archive"></i>
                         <h3>Paket </br>Snack Box</h3>
-                        <p>Create your account, build your store and sell your custom works with tons of clients.</p>
+                        <p>Kami menyediakan snack box murah untuk acara sederhana anda seperti arisan, pkk dan acara lainnya. </p>
                         <a href="<?= base_url() ?>order?form=snackbox" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div><!-- end col -->
@@ -131,7 +132,7 @@
                     <div class="boxes boxs">
                         <i class="fa fa-coffee"></i>
                         <h3>Paket Coffee Break</h3>
-                        <p>Create your account, build your store and sell your custom works with tons of clients.</p>
+                        <p>Kami menyajikan berbagai macam minuman dan snack prasmanan (coffee break) untuk kegiatan anda.</p> </br>
                         <a href="<?= base_url() ?>order?form=coffeebreak" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div><!-- end col -->
@@ -139,7 +140,7 @@
                     <div class="boxes boxs">
                         <i class="fa fa-cutlery"></i>
                         <h3>Paket Katering Prasmanan</h3>
-                        <p>Create your account, build your store and sell your custom works with tons of clients.</p>
+                        <p>Kami menawarkan menu prasmanan dengan berbagai macam paket sesuai dengan kebutuhan event anda. </p>
                         <a href="<?= base_url() ?>order?form=katering" class="btn btn-primary">Pilih Paket</a>
                     </div>
                 </div><!-- end col -->

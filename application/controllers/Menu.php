@@ -6,7 +6,7 @@ class Menu extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		// Social Media URL
+		// link URL
 		$linkHelper = list_link();
 		$this->facebook = $linkHelper['facebook'];
 		$this->instagram = $linkHelper['instagram'];
@@ -84,7 +84,7 @@ class Menu extends CI_Controller {
 			// Data Similiar Menu
 			$similiarSQL = "SELECT";
 		  $similiarSQL.= " m_barang.id, m_kategori.id AS id_kategori, m_kategori.nama AS nama_kategori, m_barang.nama AS nama_barang,";
-		  $similiarSQL.= " m_barang.gambar, m_barang.harga_satuan, m_barang.keterangan, m_barang.date_added, m_barang.status, m_barang.slug"; 
+		  $similiarSQL.= " m_barang.gambar, m_barang.harga_satuan, m_barang.keterangan, m_barang.date_added, m_barang.status, m_barang.slug";
 		  $similiarSQL.= " FROM m_barang, m_kategori";
 		  $similiarSQL.= " WHERE m_barang.id_kategori = m_kategori.id AND m_barang.status = 1";
 		  $similiarSQL.= " AND m_barang.id_kategori = '".$data['detail_menu']->id_kategori."'";

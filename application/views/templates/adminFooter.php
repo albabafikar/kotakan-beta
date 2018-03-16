@@ -20,7 +20,6 @@
     <script src="<?= base_url() ?>vendors/nprogress/nprogress.js"></script>
     <!-- jQuery custom content scroller -->
     <script src="<?= base_url() ?>vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
     <!-- bootstrap-wysiwyg -->
     <script src="<?= base_url() ?>vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
     <script src="<?= base_url() ?>vendors/jquery.hotkeys/jquery.hotkeys.js"></script>

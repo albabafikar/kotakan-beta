@@ -45,7 +45,6 @@
                             <div class="item-media text-center" style="margin: 15px;">
                                  <img alt="Sedang Loading..." class="img-responsive img-thumbnail" src="<?= $detail_menu->gambar ?>">  
                             </div><!-- end item-media -->
-
                             <?php if($detail_menu->keterangan): ?>
                             <div class="item-desc"> 
                               <?= $detail_menu->keterangan; ?>

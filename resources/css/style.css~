@@ -913,7 +913,11 @@ hr.largehr {
 
 .content-top i {
     color: #fff;
+<<<<<<< HEAD
     font-size: 21px;
+=======
+    font-size: 40px;
+>>>>>>> 48113940b6b5875ad3655597337c69d551a88747
 }
 
 .content-after {

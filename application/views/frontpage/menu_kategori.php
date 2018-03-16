@@ -50,7 +50,6 @@
                 </div>
             </div><!-- end row -->
         </div><!-- end content before -->
-
         <div class="content">
             <div class="row">
               <?php 
