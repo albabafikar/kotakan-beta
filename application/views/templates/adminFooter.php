@@ -40,7 +40,7 @@
           $('#saveBtn').click(function () {
             var mysave = $('#editor-one').html();
             $('#keterangan').val(mysave);
-        }); 
+          }); 
           <?php endif; ?>
       })
 
@@ -72,6 +72,35 @@
           return data.length > 0 ? data[0] : false; 
         }
       }
+    </script>
+    <?php elseif($this->uri->segment(2) == 'artikel'): ?>
+    <!-- Valiator -->
+    <script src="<?= base_url() ?>vendors/validator/validator.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#imgPreview").hide();
+        $('#saveBtn').click(function () {
+          var mysave = $('#editor-one').html();
+          $('#deskripsi').val(mysave);
+        }); 
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $('#imgPreview').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $("#imgUpload").change(function() {
+        readURL(this);
+        $("#imgPreview").show();
+      });
     </script>
     <?php elseif($this->uri->segment(2) == 'order'): ?>
     <script type="text/javascript">

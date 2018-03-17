@@ -12,6 +12,9 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content">
+                    <?php if(count($list_contact) == 0): ?>
+                    <h3 class="text-center">Data kontak masih kosong!</h3>
+                    <?php else: ?>
                     <table class="table table-striped table-bordered" cellspacing="0" width="100%">
                       <thead>
                         <tr>
@@ -38,6 +41,7 @@
                         <?php endforeach; ?>
                       </tbody>
                     </table>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>  

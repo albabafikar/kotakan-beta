@@ -21,6 +21,9 @@
                   <?php endif; ?>
                   <a href="<?= $this->adminSite ?>item?action=add" class="btn btn-success">Tambah Data</a>
                   <div class="x_content">
+                    <?php if(count($list_barang) == 0): ?>
+                    <h3 class="text-center">Data menu masih kosong!</h3>
+                    <?php else: ?>
                     <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                       <thead>
                         <tr>
@@ -51,6 +54,7 @@
                       </tbody>
                     </table>
                     <div class="text-center"><?php echo $this->pagination->create_links(); ?></div>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>  
