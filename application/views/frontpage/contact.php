@@ -21,26 +21,23 @@
                         <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="upload/fav.png" alt=""></a>
                     </div>
                 </div> 
-
-                <div class="col-sm-6 col-xs-12 cen-xs text-right">
+                <center>
+                 <div class="col-sm-6 col-xs-12 cen-xs text-right">
                     <ul class="list-inline social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><h2 href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></h2></li>
+                        <li><h2 href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></h2></li>
+                        <li><h2 href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></h2></li>
                     </ul>
                 </div>
+                </center>
+            </div><!-- end row -->
             </div><!-- end row -->
         </div><!-- end content top -->
 
         <div class="content boxs">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="googlemap">
-                        <div id="map"></div>
-                    </div><!-- end googlemap -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.1797826571365!2d112.62775831450485!3d-7.980360694252416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62822ebfbfad5%3A0x3e2bc72e918b7b8b!2skotakan.id!5e0!3m2!1sid!2sid!4v1521208708791" class="form-control" style="height: 350px !important;" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     <hr class="invis">
 
@@ -83,9 +80,7 @@
             </div><!-- end row -->
         </div><!-- end content -->
 
-        <div class="content-after noborder text-center boxs">
-
-        </div><!-- end content after -->
+    
 
         <div class="content-message boxs">
               <div class="row">

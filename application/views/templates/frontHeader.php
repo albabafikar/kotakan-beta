@@ -110,24 +110,7 @@
                                             <li><a href="<?= base_url() ?>contact" title="">FAQ &amp; Kontak</a></li>
                                             <li><a href="<?= base_url() ?>confirmation" title="">Konfirmasi Pembayaran</a></li>
                                         </ul>
-                                        <ul class="nav navbar-nav navbar-right">
-                                            <li class="dropdown membermenu hovermenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url() ?>resources/upload//member.jpg" alt="" class="img-circle"> <span class="caret"></span></a>
-                                                <!--ul class="dropdown-menu">
-                                                    <li class="dropdown-header">Profile</li>
-                                                    <li><a href="edit-account.html">Edit Account</a></li>
-                                                    <li><a href="#">Logout</a></li>
-                                                    <li><hr></li>
-                                                    <li class="dropdown-header">Dashboard</li>
-                                                    <li><a href="public-profile.html">Public profile</a></li>
-                                                    <li><a href="sales.html">My Sales</a></li>
-                                                    <li><a href="messages.html">Messages</a></li>
-                                                    <li><a href="<?= base_url() ?>resources/upload/-item.html"><?= base_url() ?>resources/upload/ Item</a></li>
-                                                    <li><a href="downloads.html">Downloads</a></li>
-                                                </ul-->
-                                            </li>
-                                            
-                                        </ul>
+                                        
                                     </div><!-- end navbar-cell -->
                                 </div><!-- /.navbar-collapse -->        
                             </div><!-- end navbar cell -->

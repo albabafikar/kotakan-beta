@@ -17,6 +17,7 @@
                             <li><a href="<?= base_url() ?>about" title="">Tentang Kami</a></li>
                             <li><a href="#" title="">Blog &amp; Promo</a></li>
                             <li><a href="<?= base_url() ?>contact" title="">FAQ &amp; Kontak</a></li>
+                            <li><a href="<?= base_url() ?>confirmation" title="">Konfirmasi Pembayaran</a></li>
                         </ul>
                         </ul>
                     </div>

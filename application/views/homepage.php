@@ -15,9 +15,9 @@
             <div class="row">
                 <div class="col-sm-12 col-xs-12 cen-xs text-center">
                     <ul class="list-inline social">
-                        <li><a href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><h2 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h2></li>
+                        <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
+                        <li><h2 href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></h2></li>
                     </ul>
                 </div>
             </div><!-- end row -->
@@ -26,9 +26,9 @@
         <div class="item-media text-center">
             <div id="slider" class="flexslider clearfix">
                 <ul class="slides">
-                    <li><img src="<?= base_url() ?>resources/images/promo1.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/promo2.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/promo3.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten01.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten02.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten03.jpg" alt="" class="img-responsive"></li>
                 </ul>
             </div>
         </div><!-- end item-media -->
@@ -162,7 +162,7 @@
                         <div class="panel-body">
                             <div class="form-group row">
                                 <div class="col-sm-4 col-xs-12">
-                                    <img alt="" class="img-responsive img-thumbnail" src="<?= base_url() ?>resources/upload//store_09.jpg">
+                                    <img alt="" class="img-responsive img-thumbnail" src="<?= base_url() ?>resources/images/promo.jpg">
                                 </div>
                                 <div class="col-sm-8 col-xs-12">
                                     <h4><a href="public-profile.html">Promo Gratis Ongkir Sampai 15 Maret 2018</a></h4>
@@ -195,14 +195,7 @@
             </div><!-- end r0w -->
         </div><!-- end stores -->
 
-        <div class="item-media text-center">
-            <div id="slider" class="flexslider clearfix">
-                <ul class="slides">
-                    <li><img src="<?= base_url() ?>resources/upload//about_01.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/upload//about_02.jpg" alt="" class="img-responsive"></li>
-                </ul>
-            </div>
-        </div><!-- end item-media -->
+       
     </br>
 
       

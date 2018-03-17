@@ -786,7 +786,7 @@ hr.largehr {
 }
 
 .single-wrap .page-title {
-    padding: 80px 0 10px;
+    padding: 25px 0 10px;
 }
 
 .single-wrap .page-title h3 {
@@ -1194,7 +1194,7 @@ a {
     border-radius: 0;
     list-style: outside none none;
     margin-bottom: 0;
-    padding: 0 15px 0 0;
+    padding: 10px 30px 10px 20px;
 }
 
 .breadcrumb li a,
@@ -2444,7 +2444,7 @@ form[role="login"] > div {
     .public-profile-title p {
         font-size: 13px;
         line-height: 1.6;
-        padding: 10px 0 5px;
+        padding: 10px 10px 10px 5px;
     }
     .single-wrap .page-title h3 {
         font-size: 24px;
@@ -2525,6 +2525,10 @@ form[role="login"] > div {
     }
     .yamm-content {
         padding: 0 !important;
+    }
+
+    .navbar-brand {
+        max-width: 80%;
     }
 }
 

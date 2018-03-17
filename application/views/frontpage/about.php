@@ -24,9 +24,9 @@
 
                 <div class="col-sm-6 col-xs-12 cen-xs text-right">
                     <ul class="list-inline social">
-                        <li><a href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><h2 href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></h2></li>
+                        <li><h2 href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></h2></li>
+                        <li><h2 href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></h2></li>
                     </ul>
                 </div>
             </div><!-- end row -->
@@ -63,9 +63,9 @@
                     <div class="item-media text-center">
                         <div id="slider" class="flexslider clearfix">
                             <ul class="slides">
-                                <li><img src="<?= base_url() ?>resources/images/promo1.jpg" alt="" class="img-responsive"></li>
-                                <li><img src="<?= base_url() ?>resources/images/promo2.jpg" alt="" class="img-responsive"></li>
-                                <li><img src="<?= base_url() ?>resources/images/promo3.jpg" alt="" class="img-responsive"></li>
+                                <li><img src="<?= base_url() ?>resources/images/konten01.jpg" alt="" class="img-responsive"></li>
+                                <li><img src="<?= base_url() ?>resources/images/konten02.jpg" alt="" class="img-responsive"></li>
+                                <li><img src="<?= base_url() ?>resources/images/konten03.jpg" alt="" class="img-responsive"></li>
                             </ul>
                         </div>
                     </div><!-- end item-media -->
