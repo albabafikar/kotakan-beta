@@ -52,26 +52,44 @@ class Admin extends CI_Controller {
 						4 => array(
 								'title' => 'Menu Katering',
 								'subtitle' => 'Jumlah menu katering prasmanan.',
-								'value' => 0,
+								'value' => $this->getKategoriMenu(1),
 								'icon' => 'fa fa-cube'
 							),
 						5 => array(
-								'title' => 'Jumlah Pesanan',
-								'subtitle' => 'Jumlah pesanan yang diterima.',
-								'value' => 0,
-								'icon' => 'fa fa-send'
-							),
-						6 => array(
 								'title' => 'Jumlah Artikel',
 								'subtitle' => 'Jumlah artikel yang disubmit.',
-								'value' => 0,
+								'value' => $artikel,
 								'icon' => 'fa fa-file-text-o'
 							),
+						6 => array(
+								'title' => 'Jumlah Pesanan',
+								'subtitle' => 'Jumlah pesanan yang diterima.',
+								'value' => $pesanan,
+								'icon' => 'fa fa-send'
+							),
 						7 => array(
+								'title' => 'Pesanan Menunggu',
+								'subtitle' => 'Pesanan tahap pembayaran.',
+								'value' => $this->getCountData('m_pesanan', array('status' => 2)),
+								'icon' => 'fa fa-ellipsis-h'
+							),
+						8 => array(
+								'title' => 'Pesanan Selesai',
+								'subtitle' => 'Pesanan sudah dibayar.',
+								'value' => $this->getCountData('m_pesanan', array('status' => 3)),
+								'icon' => 'fa fa-thumbs-up'
+							),
+						9 => array(
 								'title' => 'Jumlah Kontak',
 								'subtitle' => 'Jumlah kontak yang disubmit.',
-								'value' => 0,
+								'value' => $kontak,
 								'icon' => 'fa fa-envelope-o'
+							),
+						10 => array(
+								'title' => 'Jumlah Bukti Pembayaran',
+								'subtitle' => 'Bukti pembayaran yang disubmit.',
+								'value' => $bukti_pembayaran,
+								'icon' => 'fa fa-picture-o'
 							),
 					);
 				$this->indexTemplate('dashboard', $data);
@@ -348,7 +366,6 @@ class Admin extends CI_Controller {
 	private function doAction($method, $data, $files = '') {
 		switch( trimLower($method)) {
 			case 'login':
-				print_r($data);
 				$dataCondition['username'] = $data['username'];
 				$dataCondition['password'] = md5($data['password']);
 				$query = $this->QueryBuilder->select($dataCondition, 'm_user');
@@ -366,7 +383,7 @@ class Admin extends CI_Controller {
 
 			case 'add_barang':
 				$imgUpload = $this->insertImage('gambar');
-				if($imgUpload) {
+				if($imgUpload['is_ok']) {
 					$dataInsert['nama'] = $data['nama_barang'];
 					$dataInsert['id_kategori'] = $data['kategori'];
 					$dataInsert['id_subkategori'] = isset($data['subkategori']) ? $data['subkategori'] : 0;
@@ -378,8 +395,20 @@ class Admin extends CI_Controller {
 					$dataInsert['gambar'] = base_url().$imgUpload['newImage'];
 
 					$this->QueryBuilder->insert($dataInsert, 'm_barang');
+					$condition = 'success';
+					$message = "Berhasil menambah data menu!";
+				} else{
+					$condition = 'danger';
+					$message = "Error: ".$imgUpload['data'];
 				}
-				
+
+				$sessionValue = array(
+						'condition' => $condition,
+						'message' => $message
+					);
+
+				$this->session->set_flashdata('itemInfo', $sessionValue);
+					
 				redirect($this->adminSite.'item');
 			break;
 
@@ -411,7 +440,7 @@ class Admin extends CI_Controller {
   		$data = $this->upload->data();
   	}
 
-  	return array('status' => $status, 'data' => $data, 'newImage' => @$newImageName ? $uploadDir.$newImageName : null);
+  	return array('is_ok' => $status, 'data' => $data, 'newImage' => @$newImageName ? $uploadDir.$newImageName : null);
   }
 
   private function setPagination($data = array()) {

@@ -11,7 +11,6 @@
                     </div>
                     <div class="col-md-6 col-lg-7">
                         <ul class="list-inline text-right cen-xs">
-                        <li><a href="<?= base_url() ?>">Home</a></li>
                         <ul class="nav navbar-nav navbar-center">
                             <li><a class="active" href="<?= base_url() ?>" title="">Home</a></li>
                             
@@ -42,9 +41,7 @@
     ?>
     <script type="text/javascript">
     $(document).ready(function(){
-      <?php if(@$getdata['form'] != 'nasikotak'): ?>
-    <?php elseif($this->uri->segment(1) == 'order'): ?>
-    <script type="text/javascript">
+    <?php if(@$getdata['form'] != 'nasikotak'): ?>
     $(document).ready(function(){
       $("#submit").submit(function(e){
         e.preventDefault();

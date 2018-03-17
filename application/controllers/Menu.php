@@ -11,6 +11,7 @@ class Menu extends CI_Controller {
 		$this->facebook = $linkHelper['facebook'];
 		$this->instagram = $linkHelper['instagram'];
 		$this->whatsapp = $linkHelper['whatsapp'];
+		$this->kotakanPartner = $linkHelper['kotakanPartner'];
 	}	
 
 	public function Category($categoryMenu)

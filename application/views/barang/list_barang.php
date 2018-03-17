@@ -11,6 +11,14 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
+                  <?php if($this->session->flashdata('itemInfo')): $data = $this->session->userdata('itemInfo'); ?>
+                  <div class="alert alert-<?= $data['condition'] ?> alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <!-- <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good. -->
+                    <?= $data['message'] ?>
+                  </div>
+                  <?php endif; ?>
                   <a href="<?= $this->adminSite ?>item?action=add" class="btn btn-success">Tambah Data</a>
                   <div class="x_content">
                     <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
