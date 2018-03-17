@@ -6,6 +6,9 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2><a href="<?= $this->adminSite ?>order"><span class="fa fa-chevron-left"></span></a>&nbsp;Detail Pemesanan</h2>
+                    <?php if($dataOrder->status != 3): ?>
+                    <button class="pull-right btn btn-info" title="Klik apabila orderan telah dibayar." onclick="acceptOrder()">Konfirmasi Order</button>
+                    <?php endif; ?>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -105,5 +108,27 @@
               </div>
             </div>
           </div>
+
+          <!-- Konfirmasi Order -->
+          <div class="modal fade" id="modalform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+           <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Form Konfirmasi</h4>
+                </div>
+                  <div class="modal-body">
+                    <input type="hidden" name="__id" id="__id" value="<?= $dataOrder->id ?>">
+                    <h4>Orderan ini sudah dibayar?</h4>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Belum</button>
+                    <button type="submit" class="btn btn-info" id="accept">Ya, sudah</button>
+                  </div>
+                </form>
+              </div>
+           </div>
+          </div>
+          <!-- /.Konfirmasi Order-->
         </div>
         <!-- /page content -->

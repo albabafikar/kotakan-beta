@@ -208,7 +208,7 @@ class Admin extends CI_Controller {
 									pesanan.dilihat,
 									pesanan.date_added
 									FROM m_pesanan pesanan, t_data_pribadi data_pribadi
-									WHERE pesanan.id = data_pribadi.id_pesanan AND pesanan.status = 1 ORDER BY date_added DESC";
+									WHERE pesanan.id = data_pribadi.id_pesanan AND pesanan.status != 0 ORDER BY date_added DESC";
 					$data['list_pesanan'] = $this->QueryBuilder->rawQuery($sql)->result();
 					$data['siteTitle'] = "Data Pesanan";
 					$this->indexTemplate('order/list_order', $data);
@@ -415,6 +415,17 @@ class Admin extends CI_Controller {
 			case 'edit_barang':
 				print_r($data);
 				print_r($_FILES);
+			break;
+
+			case 'accept_order':
+				$params = $this->input->post();
+				if(!$params) redirect();
+
+				$dataCondition['id'] = $params['id'];
+				$dataUpdate['status'] = 3;
+				$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_pesanan');
+
+				echo json_encode(array('is_ok' => true));
 			break;
 
 			default:

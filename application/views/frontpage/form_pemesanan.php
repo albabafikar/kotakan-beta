@@ -51,7 +51,7 @@
                                             <div class="span1"></div>
                                             <div class="col-md-6 col-xs-12">
                                                 <label>No Handphone:<span style="color:#fc0505">&nbsp;*</span></label>
-                                                <input type="text" name="nohp_pemesan" class="form-control" placeholder="Contoh: +628xxxxxxxxx" autocomplete="off" required />
+                                                <input type="text" name="nohp_pemesan" class="form-control" placeholder="Contoh: 08xxxxxxxxx" autocomplete="off" required maxlength="20" onkeydown="return numericOnly(event)" />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -120,7 +120,7 @@
                                             </div>
                                             <div class="col-md-6 col-xs-12">
                                                 <label>Jam Kirim:<span style="color:#fc0505">&nbsp;*</span></label>
-                                                <input type="text" class="form-control" placeholder="Contoh: <?= rand(1,12) ?>" name="jam_kirim" autocomplete="off" required />
+                                                <input type="text" class="form-control" placeholder="Contoh: <?= rand(1,12) ?>" name="jam_kirim" autocomplete="off" required maxlength="2" onkeydown="return numericOnly(event)" />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -132,7 +132,7 @@
                                         <div class="form-group">
                                             <div class="col-md-12"><label>No Penerima:<span style="color:#fc0505">&nbsp;*</span></label></div>
                                             <div class="col-md-12">
-                                                <input type="text" name="nohp_penerima" class="form-control" placeholder="Contoh: +628xxxxxxxxx" autocomplete="off" required />
+                                                <input type="text" name="nohp_penerima" class="form-control" placeholder="Contoh: 08xxxxxxxxx" autocomplete="off" required maxlength="20" onkeydown="return numericOnly(event)"/>
                                             </div>
                                         </div>
                                         <div class="form-group">

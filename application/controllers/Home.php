@@ -234,7 +234,9 @@ class Home extends CI_Controller {
  			break;
 
  			case 'accept_order':
- 				print_r($data);
+ 				$dataCondition['no_pesanan'] = $data['__n'];
+ 				$dataUpdate['status'] = 2;
+ 				$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_pesanan');
  				// $send = array(
  				// 		'email' => $data['__e'],
  				// 		'no_pesanan' => $data['__n']

@@ -73,8 +73,36 @@
         }
       }
     </script>
-    <?php endif; ?>
+    <?php elseif($this->uri->segment(2) == 'order'): ?>
+    <script type="text/javascript">
+      function acceptOrder() {
+        $("#modalform").modal('show');
+      }
 
+      $("#accept").click(function(){
+        var orderId = $("#__id").val();
+        $.ajax({
+          type: 'post',
+          url: '<?php echo $this->adminSite.'do_action?method=accept_order'; ?>',
+          data: {"id": orderId},
+          dataType: 'json',
+          beforeSend: function() {
+            // kasi loading
+            $("#accept").html("Sedang diproses..");
+            $("#accept").prop("disabled", true);
+          },
+          success: function (response) {
+            if(response.is_ok) {
+              $("#accept").html("Ya, sudah");
+              $("#accept").prop("disabled", false);
+              $("#modalform").modal('hide');
+              alert('Berhasil konfirmasi order!');
+            }
+          }
+        });
+      })
+    </script>
+    <?php endif; ?>
     <!-- Custom Theme Scripts -->
     <script src="<?= base_url() ?>build/js/custom.min.js"></script>
     
