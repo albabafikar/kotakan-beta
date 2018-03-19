@@ -3,17 +3,21 @@
     <div class="container">
         <div class="page-title public-profile-title">
             <div class="row">
-                <div class="col-sx-12 text-center">
+                <div class="col-sx-12 text-left" style="color:#ffffff;padding-left: 20px;">
                     <h3>Indonesian Foodbox Marketplace</h3>
-                    <p>Platform pemesanan online untuk konsumsi makanan hidangan acara seperti nasi kotak, snack box, katering dan coffee break.  </p>
-                    <a href="#" class="followbtn">Pilihan Menu</a> <span>-</span> <a href="#" class="followbtn">Cara Pemesanan</a> <span>-</span> <a href="#" class="followbtn">Daftar Menjadi Vendor</a>
+                    <p style="color:#ffffff;"> Platform Marketplace FoodBox & Kuliner Pertama di Indonesia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
+                    <ul class="list-inline social">
+                        <li><h1 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h1></li>
+                        <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
+                        <li><h2 href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></h2></li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="content-top">
+        <!--div class="content-top">
             <div class="row">
-                <div class="col-sm-12 col-xs-12 cen-xs text-center">
+                <div class="col-sm-12 col-xs-12 cen-xs text-left">
                     <ul class="list-inline social">
                         <li><h2 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h2></li>
                         <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
@@ -23,16 +27,7 @@
             </div><!-- end row -->
         </div><!-- end content top -->
 
-        <div class="item-media text-center">
-            <div id="slider" class="flexslider clearfix">
-                <ul class="slides">
-                    <li><img src="<?= base_url() ?>resources/images/konten01.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/konten02.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/konten03.jpg" alt="" class="img-responsive"></li>
-                </ul>
-            </div>
-        </div><!-- end item-media -->
-        
+      
 
         <!--div class="content-before">
             <div class="row">
@@ -68,6 +63,37 @@
             </div><-end row>
         </div><!-- end content before -->
 
+        <div class="content-before">
+            <div class="row">
+                <div class="col-md-12 col-sx-12 cen-xs">
+                    <form class="dropForm" method="get">
+                        <div class="input-prepend">
+                            <?php
+                            $string = array('Nasi Kotak', 'Snack Box', 'Katering', 'Coffee Break');
+                            $rand = array_rand($string);
+                            ?>
+                            <div class="btn-group">
+                                <select name="category" class="selectpicker">
+                                  <option value="all">Semua</option>
+                                  <?php foreach($string as $str): ?>
+                                  <option value="<?= strtolower(str_replace(' ', '', $str)) ?>"><?= $str ?></option>
+                                  <?php endforeach; ?>
+                              </select>
+                            </div>
+                            <div class="btn-group">
+                                <select name="price" class="selectpicker">
+                                  <option value="lowest">Harga Terendah</option>
+                                  <option value="highest">Harga Tertinggi</option>
+                              </select>
+                            </div>
+                            <input type="text" name="q" class="form-control" placeholder="Saya mau cari..." autocomplete="off" />
+                            <button class="btn btn-primary" tabindex="-1"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end content before -->
+
         <div class="content">
             <div class="row">
                 <div class="col-md-12 general-title">
@@ -90,7 +116,7 @@
                         4 => 'katering'
                     );
                 foreach($list_menu as $data): ?>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-3">
                     <div class="item-box">
                         <div class="item-media entry">
                             <img src="<?= $data->gambar ?>" style="height: 200px" alt="" class="img-responsive" />
@@ -107,7 +133,20 @@
                 <?php endforeach; ?>
             </div>
         </div>
+
         </br>
+        
+
+          <div class="item-media text-center">
+            <div id="slider" class="flexslider clearfix">
+                <ul class="slides">
+                    <li><img src="<?= base_url() ?>resources/images/konten01.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten02.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten03.jpg" alt="" class="img-responsive"></li>
+                </ul>
+            </div>
+        </div><!-- end item-media -->
+        
         </br>
         <div class="refer-messages">
             <div class="row text-center">
@@ -147,6 +186,8 @@
 
             </div><!-- end row -->
         </div><!-- end refer-messages -->
+
+
 
         <div class="stores boxs">
             <div class="row">
@@ -195,9 +236,7 @@
             </div><!-- end r0w -->
         </div><!-- end stores -->
 
-       
-    </br>
-
+   
       
         <div class="content-message boxs">
             <div class="row">

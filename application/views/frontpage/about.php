@@ -7,7 +7,7 @@
                     <div class="bread">
                         <ol class="breadcrumb">
                          <p style="color:#ffffff"> Platform Marketplace FoodBox Pertama di Indonesia bahkan di Dunia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
-
+                         <a href="#" class="followbtn" color:#ffffff>Pilihan Menu</a> <span>-</span> <a href="#" class="followbtn">Cara Pemesanan</a> <span>-</span> <a href="#" class="followbtn">Daftar Menjadi Vendor</a>
                         </ol>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     </div> -->
                 </div> 
 
-                <div class="col-sm-6 col-xs-12 cen-xs text-right">
+                <div class="col-sm-12 col-xs-12 cen-xs text-center">
                     <ul class="list-inline social">
                         <li><h2 href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></h2></li>
                         <li><h2 href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></h2></li>
