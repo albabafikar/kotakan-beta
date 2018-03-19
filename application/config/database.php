@@ -79,7 +79,6 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => 'root',
 	'database' => 'kotakan-beta',
-	
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -3,7 +3,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-sx-12 text-center">
-                    <h3>Paket Sop Murah</h3>
+                    <h3><?= $detail_menu->nama_barang ?></h3>
                 </div>
             </div>
         </div>

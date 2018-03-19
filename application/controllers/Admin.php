@@ -253,6 +253,31 @@ class Admin extends CI_Controller {
 				$getdata = $this->input->get();
 				if(isset($getdata['action'])) {
 					switch(trimLower($getdata['action'])) {
+						case 'add':
+							$data['siteTitle'] = "Tambah Artikel";
+							$this->indexTemplate('artikel/add_artikel', $data);
+						break;
+
+						case 'detail':
+							if(!$getdata['id']) redirect();
+							$sql = "SELECT 
+									artikel.id, artikel.judul, 
+									artikel.konten, user.nama AS nama_author, artikel.gambar_utama, 
+									artikel.date_added, artikel.slug, artikel.dilihat
+									FROM m_artikel artikel, m_user user
+									WHERE artikel.status = 1 AND artikel.author = user.id AND artikel.id = ".$getdata['id'];
+							$data['detail_artikel'] = $this->QueryBuilder->rawQuery($sql)->row();
+							$data['siteTitle'] = "Detail Artikel";
+							$this->indexTemplate('artikel/detail_artikel', $data);
+						break;
+
+						case 'delete':
+							if(!$getdata['id']) redirect();
+
+							$this->QueryBuilder->update(array('id' => $getdata['id']), array('status' => 0), 'm_artikel');
+							redirect($this->adminRoute.'artikel');
+						break;
+
 						default:
 							redirect();
 						break;
@@ -262,7 +287,7 @@ class Admin extends CI_Controller {
 									artikel.id, artikel.judul, 
 									artikel.konten, user.nama AS nama_author
 									FROM m_artikel artikel, m_user user
-									WHERE artikel.status = 1 AND artikel.author = user.id";
+									WHERE artikel.status = 1 AND artikel.author = user.id ORDER BY artikel.date_added DESC";
 					$data['list_artikel'] = $this->QueryBuilder->rawQuery($sql)->result();
 					$data['siteTitle'] = "Data Artikel";
 					$this->indexTemplate('artikel/list_artikel', $data);
@@ -415,6 +440,35 @@ class Admin extends CI_Controller {
 			case 'edit_barang':
 				print_r($data);
 				print_r($_FILES);
+			break;
+
+			case 'add_artikel':
+				$imgUpload = $this->insertImage('gambar');
+				if($imgUpload['is_ok']) {
+					$dataInsert['judul'] = $data['judul'];
+					$dataInsert['konten'] = nl2br($data['deskripsi']);
+					$dataInsert['date_added'] = date('Y-m-d H:i:s');
+					$dataInsert['slug'] = createSlug($data['judul']);
+					$dataInsert['status'] = 1;
+					$dataInsert['author'] = $this->userdata->id;
+					$dataInsert['gambar_utama'] = base_url().$imgUpload['newImage'];
+
+					$this->QueryBuilder->insert($dataInsert, 'm_artikel');
+					$condition = 'success';
+					$message = "Berhasil menambah artikel!";
+				} else{
+					$condition = 'danger';
+					$message = "Error: ".$imgUpload['data'];
+				}
+
+				$sessionValue = array(
+						'condition' => $condition,
+						'message' => $message
+					);
+
+				$this->session->set_flashdata('artikelInfo', $sessionValue);
+					
+				redirect($this->adminSite.'artikel');
 			break;
 
 			case 'accept_order':
