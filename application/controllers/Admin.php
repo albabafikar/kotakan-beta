@@ -17,6 +17,13 @@ class Admin extends CI_Controller {
 		$router = trimLower($action);
 
 		switch($router){
+			case 'test':
+				$send = array(
+ 						'email' => "reksarw@gmail.com",
+ 						'no_pesanan' => "#123"
+ 					);
+ 				$this->sendEmail($send);
+			break;
 			case 'dashboard':
 				$menu = $this->getCountData('m_barang', array('status' => 1));
 				$artikel = $this->getCountData('m_artikel', array('status' => 1));
@@ -271,6 +278,19 @@ class Admin extends CI_Controller {
 							$this->indexTemplate('artikel/detail_artikel', $data);
 						break;
 
+						case 'edit':
+							if(!$getdata['id']) redirect();
+							$sql = "SELECT 
+									artikel.id, artikel.judul, 
+									artikel.konten, user.nama AS nama_author, artikel.gambar_utama, 
+									artikel.date_added, artikel.slug, artikel.dilihat
+									FROM m_artikel artikel, m_user user
+									WHERE artikel.status = 1 AND artikel.author = user.id AND artikel.id = ".$getdata['id'];
+							$data['detail_artikel'] = $this->QueryBuilder->rawQuery($sql)->row();
+							$data['siteTitle'] = "Ubah Artikel";
+							$this->indexTemplate('artikel/edit_artikel', $data);
+						break;
+
 						case 'delete':
 							if(!$getdata['id']) redirect();
 
@@ -438,8 +458,44 @@ class Admin extends CI_Controller {
 			break;
 
 			case 'edit_barang':
-				print_r($data);
-				print_r($_FILES);
+				$dataCondition['id'] = $data['id'];
+				$item = $this->QueryBuilder->select($dataCondition, 'm_barang')->row();
+				if($_FILES['gambar']['name'] != null){
+					$imgUpload = $this->insertImage('gambar');
+					if($imgUpload['is_ok']) {
+						$dataUpdate['nama'] = @$data['nama_barang'] ? $data['nama_barang'] : $item->nama;
+						$dataUpdate['harga_satuan'] = @$data['harga_satuan'] ? $data['harga_satuan'] : $item->harga_satuan;
+						$dataUpdate['keterangan'] = @$data['keterangan'] ? nl2br($data['keterangan']) : $item->keterangan;
+						$dataUpdate['id_kategori'] = @$data['kategori'] ? $data['kategori'] : $item->id_kategori;
+						$dataUpdate['slug'] = @$data['nama_barang'] ? createSlug($data['nama_barang']) : $item->slug;
+						$dataUpdate['id_subkategori'] = isset($data['subkategori']) ? $data['subkategori'] : $item->id_subkategori;
+						$dataUpdate['gambar'] = base_url().$imgUpload['newImage'];
+						$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_barang');
+						$condition = 'success';
+						$message = "Berhasil mengubah data menu!";
+					} else{
+						$condition = 'danger';
+						$message = "Error: ".$imgUpload['data'];
+					}
+				} else{
+					$dataUpdate['nama'] = @$data['nama_barang'] ? $data['nama_barang'] : $item->nama;
+					$dataUpdate['harga_satuan'] = @$data['harga_satuan'] ? $data['harga_satuan'] : $item->harga_satuan;
+					$dataUpdate['keterangan'] = @$data['keterangan'] ? nl2br($data['keterangan']) : $item->keterangan;
+					$dataUpdate['id_kategori'] = @$data['kategori'] ? $data['kategori'] : $item->id_kategori;
+					$dataUpdate['slug'] = @$data['nama_barang'] ? createSlug($data['nama_barang']) : $item->slug;
+					$dataUpdate['id_subkategori'] = isset($data['subkategori']) ? $data['subkategori'] : $item->id_subkategori;
+					$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_barang');
+					$condition = 'success';
+					$message = "Berhasil mengubah data menu!";
+				}
+
+				$sessionValue = array(
+							'condition' => $condition,
+							'message' => $message
+						);
+				$this->session->set_flashdata('itemInfo', $sessionValue);
+					
+				redirect($this->adminSite.'item');
 			break;
 
 			case 'add_artikel':
@@ -466,6 +522,41 @@ class Admin extends CI_Controller {
 						'message' => $message
 					);
 
+				$this->session->set_flashdata('artikelInfo', $sessionValue);
+					
+				redirect($this->adminSite.'artikel');
+			break;
+
+			case 'edit_artikel':
+				$dataCondition['id'] = $data['id'];
+				$artikel = $this->QueryBuilder->select($dataCondition, 'm_artikel')->row();
+				if($_FILES['gambar']['name'] != null){
+					$imgUpload = $this->insertImage('gambar');
+					if($imgUpload['is_ok']) {
+						$dataUpdate['judul'] = @$data['judul'] ? $data['judul'] : $artikel->judul;
+						$dataUpdate['slug'] = @$data['judul'] ? createSlug($data['judul']) : $artikel->slug;
+						$dataUpdate['konten'] = @$data['deskripsi'] ? nl2br($data['deskripsi']) : $artikel->konten;
+						$dataUpdate['gambar_utama'] = base_url().$imgUpload['newImage'];
+						$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_artikel');
+						$condition = 'success';
+						$message = "Berhasil mengubah data artikel!";
+					} else{
+						$condition = 'danger';
+						$message = "Error: ".$imgUpload['data'];
+					}
+				} else{
+					$dataUpdate['judul'] = @$data['judul'] ? $data['judul'] : $artikel->judul;
+					$dataUpdate['slug'] = @$data['judul'] ? createSlug($data['judul']) : $artikel->slug;
+					$dataUpdate['konten'] = @$data['deskripsi'] ? nl2br($data['deskripsi']) : $artikel->konten;
+					$this->QueryBuilder->update($dataCondition, $dataUpdate, 'm_artikel');
+					$condition = 'success';
+					$message = "Berhasil mengubah data artikel!";
+				}
+
+				$sessionValue = array(
+							'condition' => $condition,
+							'message' => $message
+						);
 				$this->session->set_flashdata('artikelInfo', $sessionValue);
 					
 				redirect($this->adminSite.'artikel');
@@ -549,6 +640,41 @@ class Admin extends CI_Controller {
   	$dataCondition['id_kategori'] = $id;
 
   	return $this->getCountData('m_barang', $dataCondition);
+  }
+
+  private function sendEmail($data) {
+  	$config =  array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'ssl://mail.kotakan.id',
+		  'smtp_port' => 465,
+		  'smtp_user' => 'mimin@kotakan.id', // change it to yours
+		  'smtp_pass' => 'adminkotakan1', // change it to yours
+		  'mailtype' => 'html',
+		  'charset' => 'iso-8859-1',
+		  'wordwrap' => TRUE
+		);
+  	$this->load->library('email', $config);
+  	
+  	$this->email->from('mimin@kotakan.id', 'Mimin Kotakan');
+  	$this->email->to($data['email']);
+
+  	// BCC ke List Email Berikut
+  	// $listBcc = array(
+  	// 		'fikaralbaba@gmail.com', 'inikotakan@gmail.com'
+  	// 	);
+  	// $this->email->bcc($listBcc);
+  	
+  	$this->email->subject('Kotakan: Informasi Pemesanan '.$data['no_pesanan']);
+  	$this->email->message('Message from Mimin Motakan');
+  	
+  	if($this->email->send())
+     {
+      echo 'Email sent.';
+     }
+     else
+    {
+     show_error($this->email->print_debugger());
+    }
   }
 }
 

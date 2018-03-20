@@ -47,7 +47,7 @@
                           <td class=""><div class="btn-group">
                           <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>item?action=detail&id=<?= $row->id ?>" title="Detail Data"><i class="fa fa-file-text-o"></i></a>
                           <!-- <?= $this->adminSite ?>item?action=edit&id=<?= $row->id ?> -->
-                          <a class="btn btn-sm btn-default" href="#" title="Ubah Data"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>item?action=edit&id=<?= $row->id ?>" title="Ubah Data"><i class="fa fa-pencil"></i></a>
                           <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>item?action=delete&id=<?= $row->id ?>" title="Hapus Data"><i class="fa fa-trash"></i></a></div></td>
                         </tr>
                         <?php endforeach; ?>

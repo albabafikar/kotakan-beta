@@ -10,29 +10,33 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
+          <?php if(!$detail_artikel): ?>
+          <h4 class="text-center">Data Artikel tidak ditemukan!</h4>
+          <?php else: ?>
           <div class="x_title">
-            <h2><a href="<?= $this->adminSite ?>artikel"><span class="fa fa-chevron-left"></span></a>&nbsp;Form Tambah Artikel</h2>
+            <h2><a href="<?= $this->adminSite ?>artikel"><span class="fa fa-chevron-left"></span></a>&nbsp;Form Tambah Artikel<small>Catatan: Kosongkan apabila tidak ingi diubah.</small></h2>
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" method="post" novalidate action="<?= $this->adminSite ?>do_action?method=add_artikel" enctype="multipart/form-data">
+            <form class="form-horizontal form-label-left" method="post" novalidate action="<?= $this->adminSite ?>do_action?method=edit_artikel" enctype="multipart/form-data">
+              <input type="hidden" name="id" value="<?= $detail_artikel->id ?>">
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Judul <span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Judul
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="" class="form-control col-md-7 col-xs-12" name="judul"  required="required" type="text" autocomplete="off" />
+                  <input id="" class="form-control col-md-7 col-xs-12" name="judul"  type="text" autocomplete="off" />
                 </div>
               </div>
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Gambar Utama <span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Gambar Utama
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="file" name="gambar" id="imgUpload" required/><br/>
+                  <input type="file" name="gambar" id="imgUpload" /><br/>
                   <img id="imgPreview" src="#" alt="Image Preview" width="55%" height="50%" />
                 </div>
               </div>
               <div class="item form-group">
-                <label class="control-label">Deksripsi <span class="required">*</span></label>
+                <label class="control-label">Deksripsi</label>
                 <div id="alerts"></div>
                 <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
                   <div class="btn-group">
@@ -74,6 +78,7 @@
               </div>
             </form>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>

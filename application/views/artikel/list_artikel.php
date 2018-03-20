@@ -44,7 +44,7 @@
                           <td><?= $row->nama_author ?></td>
                           <td class=""><div class="btn-group">
                           <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>artikel?action=detail&id=<?= $row->id ?>" title="Detail Data"><i class="fa fa-file-text-o"></i></a>
-                          <a class="btn btn-sm btn-default" title="Ubah Data"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>artikel?action=edit&id=<?= $row->id ?>" title="Ubah Data"><i class="fa fa-pencil"></i></a>
                           <a class="btn btn-sm btn-default" href="<?= $this->adminSite ?>artikel?action=delete&id=<?= $row->id ?>" title="Hapus Data"><i class="fa fa-trash"></i></a></div></td>
                         </tr>
                         <?php endforeach; ?>
