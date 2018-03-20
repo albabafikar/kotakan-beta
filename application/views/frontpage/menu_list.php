@@ -32,7 +32,7 @@
             </div>
         </div>
 
-         <div class="content-before">
+        <div class="content-before">
             <div class="row">
                 <div class="col-md-12 col-sx-12 cen-xs">
                     <form class="dropForm" method="get">
