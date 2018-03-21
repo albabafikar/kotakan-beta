@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1:8889',
+	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'root',
-	'database' => 'kotakan-beta',
+	'password' => 'reksarw',
+	'database' => 'kotakan',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

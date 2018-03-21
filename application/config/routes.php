@@ -56,5 +56,7 @@ $route['adminsite/(:any)/(:num)']	= 'Admin/Router/$1/$2';
 $route['(:any)'] = 'Home/Router/$1';
 $route['menu/(:any)'] = 'Menu/Category/$1';
 $route['menu/detail/(:any)'] = 'Menu/Detail/$1';
+$route['blog/(:any)'] = 'Blog/errorPages'; 
+$route['blog/detail/(:any)'] = 'Blog/Detail/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

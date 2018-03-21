@@ -44,7 +44,7 @@ class Menu extends CI_Controller {
 		  if(!isset($getdata['q']) && !isset($getdata['price'])) {
 		  	$sql.= " ORDER BY m_barang.date_added DESC";
 		  }
-		  $pagingPerPage = 2;
+		  $pagingPerPage = 6;
 		  // Pagination custom config
 			$configPaging = array(
 					'baseUrl' => base_url().'menu/'.$kategori,

@@ -105,10 +105,10 @@
                                                     </li>
                                                 </ul>
                                             </li><!-- end mega menu -->
-                                            <li><a href="<?= base_url() ?>about" title="">Tentang Kami</a></li>
-                                            <li><a href="#" title="">Blog &amp; Promo</a></li>
-                                            <li><a href="<?= base_url() ?>contact" title="">FAQ &amp; Kontak</a></li>
-                                            <li><a href="<?= base_url() ?>confirmation" title="">Konfirmasi Pembayaran</a></li>
+                                            <li><a href="<?= base_url() ?>about" title="Tentang Kami">Tentang Kami</a></li>
+                                            <li><a href="<?= base_url() ?>blog" title="Blog &amp; Promo">Blog &amp; Promo</a></li>
+                                            <li><a href="<?= base_url() ?>contact" title="FAQ &amp; Kontak">FAQ &amp; Kontak</a></li>
+                                            <li><a href="<?= base_url() ?>confirmation" title="Konfirmasi Pembayaran">Konfirmasi Pembayaran</a></li>
                                         </ul>
                                         
                                     </div><!-- end navbar-cell -->

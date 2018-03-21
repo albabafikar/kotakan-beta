@@ -17,13 +17,6 @@ class Admin extends CI_Controller {
 		$router = trimLower($action);
 
 		switch($router){
-			case 'test':
-				$send = array(
- 						'email' => "reksarw@gmail.com",
- 						'no_pesanan' => "#123"
- 					);
- 				$this->sendEmail($send);
-			break;
 			case 'dashboard':
 				$menu = $this->getCountData('m_barang', array('status' => 1));
 				$artikel = $this->getCountData('m_artikel', array('status' => 1));
@@ -640,41 +633,6 @@ class Admin extends CI_Controller {
   	$dataCondition['id_kategori'] = $id;
 
   	return $this->getCountData('m_barang', $dataCondition);
-  }
-
-  private function sendEmail($data) {
-  	$config =  array(
-		  'protocol' => 'smtp',
-		  'smtp_host' => 'ssl://mail.kotakan.id',
-		  'smtp_port' => 465,
-		  'smtp_user' => 'mimin@kotakan.id', // change it to yours
-		  'smtp_pass' => 'adminkotakan1', // change it to yours
-		  'mailtype' => 'html',
-		  'charset' => 'iso-8859-1',
-		  'wordwrap' => TRUE
-		);
-  	$this->load->library('email', $config);
-  	
-  	$this->email->from('mimin@kotakan.id', 'Mimin Kotakan');
-  	$this->email->to($data['email']);
-
-  	// BCC ke List Email Berikut
-  	// $listBcc = array(
-  	// 		'fikaralbaba@gmail.com', 'inikotakan@gmail.com'
-  	// 	);
-  	// $this->email->bcc($listBcc);
-  	
-  	$this->email->subject('Kotakan: Informasi Pemesanan '.$data['no_pesanan']);
-  	$this->email->message('Message from Mimin Motakan');
-  	
-  	if($this->email->send())
-     {
-      echo 'Email sent.';
-     }
-     else
-    {
-     show_error($this->email->print_debugger());
-    }
   }
 }
 

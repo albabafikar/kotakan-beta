@@ -235,7 +235,7 @@ a[x-apple-data-detectors=true] {
                   
                     <div align="center" class="img-container center fixedwidth " style="padding-right: 0px;  padding-left: 0px;">
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
-  <img class="center fixedwidth" align="center" border="0" src="<?= base_url() ?>resources/images/favicon.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 102px" width="102">
+  <img class="center fixedwidth" align="center" border="0" src="http://beta.kotakan.id/resources/images/favicon.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 102px" width="102">
 <!--[if mso]></td></tr></table><![endif]-->
 </div>
 
@@ -269,7 +269,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;"><![endif]-->
 	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 5px;">	
-		<div style="font-size:12px;line-height:14px;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#000000;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center"><span style="font-size: 18px; line-height: 21px;">No Pesanan:</span><strong><span style="font-size: 18px; line-height: 21px;"> #123131<br></span></strong></p></div>	
+		<div style="font-size:12px;line-height:14px;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#000000;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center"><span style="font-size: 18px; line-height: 21px;">No Pesanan:</span><strong><span style="font-size: 18px; line-height: 21px;"> <?= $no_pesanan ?><br></span></strong></p></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -283,11 +283,10 @@ a[x-apple-data-detectors=true] {
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
                   
-                  
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 20px; line-height: 24px;"><strong>Data Pemesan</strong></span></p></div>	
+		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 20px; line-height: 24px;"><strong>DATA PEMESAN</strong></span></p></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -305,11 +304,123 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;">Reksa Rangga Wardhana</span><br></p></div>	
+		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->nama_pemesan ?></strong></span><br></p></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">No Handphone</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
                   
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->nomor_pemesan ?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">Email</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->email ?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">Alamat</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+                  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->alamat_pemesan ?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 20px; line-height: 24px;"><strong>DATA PENGIRIMAN</strong></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+                  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">Alamat Pengiriman</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+                  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->alamat_penerima ?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">No Handphone</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+                  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= $dataOrder->nomor_penerima ?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+<div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 12px; line-height: 14px;"><span style="line-height: 16px; font-size: 14px;">Tanggal Kirim</span><span style="font-size: 16px; line-height: 19px;">﻿</span></span></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+                  
+                  
+                    <div class="">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+  <div style="color:#555555;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">  
+    <div style="font-size:12px;line-height:14px;color:#555555;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px;"><strong><?= date('d/m/Y H:i', strtotime($dataOrder->tanggal_kirim))?></strong></span><br></p></div>  
+  </div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>
+  <!--[if mso]></td></tr></table><![endif]-->
+</div>                  
+
               <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
               </div>
             </div>
@@ -330,7 +441,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#FFFFFF;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px">MENU</p></div>	
+		<div style="font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px">DATA MENU</p></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -347,7 +458,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#FFFFFF;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><span style="font-size: 14px; line-height: 16px;">PRICE</span><br></p></div></div></div>	
+		<div style="font-size:12px;line-height:14px;color:#FFFFFF;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><span style="font-size: 14px; line-height: 16px;">HARGA</span><br></p></div></div></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -358,7 +469,10 @@ a[x-apple-data-detectors=true] {
           <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
         </div>
       </div>
-    </div>    <div style="background-color:transparent;">
+    </div>  
+    <?php foreach($dataMenu as $menu): ?>
+    <!-- FIRST -->  
+    <div style="background-color:transparent;">
       <div style="Margin: 0 auto;min-width: 320px;max-width: 510px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid mixed-two-up ">
         <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
           <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 510px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
@@ -372,7 +486,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><span style="color: rgb(0, 0, 0); font-size: 14px; line-height: 16px;"><a style="color:#71777D;text-decoration: none; color: rgb(0, 0, 0);" href="https://beefree.io" target="_blank">1 x Name of your product #1</a></span></p></div></div></div></div>	
+		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><span style="color: rgb(0, 0, 0); font-size: 14px; line-height: 16px;"><?= $menu->nama_barang ?></span></p></div></div></div></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -389,7 +503,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px">$300</p></div></div></div></div>	
+		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><?= toRupiah($menu->harga_satuan) ?></p></div></div></div></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -400,45 +514,10 @@ a[x-apple-data-detectors=true] {
           <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
         </div>
       </div>
-    </div>    <div style="background-color:transparent;">
-      <div style="Margin: 0 auto;min-width: 320px;max-width: 510px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid mixed-two-up ">
-        <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
-          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 510px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
+    </div>   
 
-              <!--[if (mso)|(IE)]><td align="center" width="340" style=" width:340px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
-            <div class="col num8" style="display: table-cell;vertical-align: top;min-width: 320px;max-width: 336px;">
-              <div style="background-color: transparent; width: 100% !important;">
-              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
-
-                  
-                    <div class="">
-	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
-	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#000000;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 17px"><span style="color: rgb(0, 0, 0); font-size: 14px; line-height: 16px;"><a style="color:#71777D;text-decoration: none; color: rgb(0, 0, 0);" href="https://beefree.io" target="_blank" rel="noopener" data-mce-selected="1">﻿1 x Name of your product #1</a></span><br data-mce-bogus="1"></p></div>	
-	</div>
-	<!--[if mso]></td></tr></table><![endif]-->
-</div>
-                  
-              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-              </div>
-            </div>
-              <!--[if (mso)|(IE)]></td><td align="center" width="170" style=" width:170px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
-            <div class="col num4" style="display: table-cell;vertical-align: top;max-width: 320px;min-width: 168px;">
-              <div style="background-color: transparent; width: 100% !important;">
-              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
-
-                  
-                    <div class="">
-	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
-	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">	
-		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px">$300</p></div></div></div></div>	
-	</div>
-	<!--[if mso]></td></tr></table><![endif]-->
-</div>
-                  
-              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-              </div>
-            </div>
+    <!-- END -->
+    <?php endforeach; ?>
           <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
         </div>
       </div>
@@ -509,7 +588,7 @@ a[x-apple-data-detectors=true] {
                     <div class="">
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 5px; padding-bottom: 5px;"><![endif]-->
 	<div style="color:#000000;line-height:120%;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif; padding-right: 20px; padding-left: 20px; padding-top: 5px; padding-bottom: 5px;">	
-		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><strong>$600</strong></p></div></div></div></div></div>	
+		<div style="font-size:12px;line-height:14px;color:#000000;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;text-align:left;"><div class="txtTinyMce-wrapper" style="font-size:12px; line-height:14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><div class="txtTinyMce-wrapper" style="font-size: 12px; line-height: 14px;"><p style="margin: 0;font-size: 14px;line-height: 16px"><strong><?= toRupiah($dataOrder->total_biaya) ?></strong></p></div></div></div></div></div>	
 	</div>
 	<!--[if mso]></td></tr></table><![endif]-->
 </div>
@@ -573,46 +652,7 @@ a[x-apple-data-detectors=true] {
               <!--[if (mso)|(IE)]><td align="center" width="510" style=" width:510px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
             <div class="col num12" style="min-width: 320px;max-width: 510px;display: table-cell;vertical-align: top;">
               <div style="background-color: transparent; width: 100% !important;">
-              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
-
-                  
-                    
-<div align="center" style="padding-right: 5px; padding-left: 5px; padding-bottom: 5px;" class="">
-  <div style="line-height:5px;font-size:1px">&#160;</div>
-  <div style="display: table; max-width:141px;">
-  <!--[if (mso)|(IE)]><table width="131" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-collapse:collapse; padding-right: 5px; padding-left: 5px; padding-bottom: 5px;"  align="center"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:131px;"><tr><td width="32" style="width:32px; padding-right: 5px;" valign="top"><![endif]-->
-    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 5px">
-      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-        <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-          <img src="<?= base_url() ?>resources/images/facebook@2x.png" alt="Facebook" title="Facebook" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
-        </a>
-      <div style="line-height:5px;font-size:1px">&#160;</div>
-      </td></tr>
-    </tbody></table>
-      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 5px;" valign="top"><![endif]-->
-    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 5px">
-      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-        <a href="https://twitter.com/" title="Twitter" target="_blank">
-          <img src="<?= base_url() ?>resources/images/twitter@2x.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
-        </a>
-      <div style="line-height:5px;font-size:1px">&#160;</div>
-      </td></tr>
-    </tbody></table>
-      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 0;" valign="top"><![endif]-->
-    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 0">
-      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-        <a href="https://plus.google.com/" title="Google+" target="_blank">
-          <img src="<?= base_url() ?>resources/images/googleplus@2x.png" alt="Google+" title="Google+" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
-        </a>
-      <div style="line-height:5px;font-size:1px">&#160;</div>
-      </td></tr>
-    </tbody></table>
-    <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
-  </div>
-</div>
-                  
-                  
-                    
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->      
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="divider " style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
     <tbody>
         <tr style="vertical-align: top">

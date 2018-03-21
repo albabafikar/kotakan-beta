@@ -65,6 +65,35 @@ class Home extends CI_Controller {
 				}
 			break;
 
+			case 'blog':
+				$getdata = $this->input->get();
+				$sql = "SELECT 
+								artikel.id, artikel.judul, artikel.gambar_utama, artikel.slug,
+								artikel.konten, user.nama AS nama_author, artikel.date_added
+								FROM m_artikel artikel, m_user user
+								WHERE artikel.status = 1 AND artikel.author = user.id ORDER BY artikel.date_added DESC";
+				$pagingPerPage = 6;
+			  // Pagination custom config
+				$configPaging = array(
+						'baseUrl' => base_url().'blog/',
+						'totalRows' => $this->QueryBuilder->rawQuery($sql)->num_rows(),
+						'perPage' => $pagingPerPage,
+						'numLinks' => 1
+					);
+				//* Pagination custom config
+			  if(@$getdata['next']) { 
+			  	$pattern = (bool) preg_match('/^[0-9]*$/', $getdata['next']);
+			  	if(!$pattern) redirect();
+			  	$offset = (int) $getdata['next'] * (int) $pagingPerPage;
+			  	$sql .= " LIMIT ".$pagingPerPage.", ".$offset;
+			  } else {
+			  	$sql .= " LIMIT 0, ".$pagingPerPage;
+			  }
+				$data['list_artikel'] = $this->QueryBuilder->rawQuery($sql)->result();
+				$data['paging'] = createPagination($configPaging);
+				$this->indexTemplate('frontpage/blog_list', $data);
+			break;
+
 			case 'contact':
 				$this->indexTemplate('frontpage/contact');
 			break;
@@ -321,7 +350,7 @@ class Home extends CI_Controller {
   	return array('is_ok' => $status, 'data' => $data, 'newImage' => @$newImageName ? $uploadDir.$newImageName : null);
   }
 
-  private function sendEmail($data) {
+  private function sendEmail($params) {
   	$config =  array(
 		  'protocol' => 'smtp',
 		  'smtp_host' => 'ssl://mail.kotakan.id',
@@ -329,13 +358,13 @@ class Home extends CI_Controller {
 		  'smtp_user' => 'mimin@kotakan.id', // change it to yours
 		  'smtp_pass' => 'adminkotakan1', // change it to yours
 		  'mailtype' => 'html',
-		  'charset' => 'iso-8859-1',
+		  'charset' => 'utf-8',
 		  'wordwrap' => TRUE
 		);
   	$this->load->library('email', $config);
   	
   	$this->email->from('mimin@kotakan.id', 'Mimin Kotakan');
-  	$this->email->to($data['email']);
+  	$this->email->to($params['to']);
 
   	// BCC ke List Email Berikut
   	// $listBcc = array(
@@ -343,8 +372,23 @@ class Home extends CI_Controller {
   	// 	);
   	// $this->email->bcc($listBcc);
   	
-  	$this->email->subject('Kotakan: Informasi Pemesanan '.$data['no_pesanan']);
-  	$this->email->message('Message from Mimin Motakan');
+  	$this->email->subject('Kotakan: Informasi Pemesanan '.$params['no_pesanan']);
+  	$sqlOrder = "SELECT
+								pesanan.*,
+								self.nama AS nama_pemesan, self.no_hp AS nomor_pemesan, self.email, self.alamat AS alamat_pemesan
+								FROM m_pesanan pesanan, t_data_pribadi self
+								WHERE pesanan.id = self.id_pesanan AND pesanan.no_pesanan = '".$params['no_pesanan']."' AND pesanan.status != 0";
+		$data['dataOrder'] = $this->QueryBuilder->rawQuery($sqlOrder)->row();
+		$sqlMenu = "SELECT
+								pesanan.id , barang.nama AS nama_barang, kategori.nama AS nama_kategori, barang.harga_satuan
+								FROM t_order pesanan,m_barang barang, m_kategori kategori 
+								WHERE pesanan.id_barang = barang.id AND barang.id_kategori = kategori.id 
+								AND pesanan.id = '".$data['dataOrder']->id."'
+								ORDER BY pesanan.id";
+		$data['dataMenu'] = $this->QueryBuilder->rawQuery($sqlMenu)->result();
+		$data['no_pesanan'] = $params['no_pesanan'];
+		$message = $this->load->view('email', $data, TRUE);
+  	$this->email->message($message);
   	
   	if($this->email->send())
      {
