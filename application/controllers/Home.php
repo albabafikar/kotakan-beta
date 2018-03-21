@@ -364,13 +364,13 @@ class Home extends CI_Controller {
   	$this->load->library('email', $config);
   	
   	$this->email->from('mimin@kotakan.id', 'Mimin Kotakan');
-  	$this->email->to($params['to']);
+  	$this->email->to($params['email']);
 
   	// BCC ke List Email Berikut
-  	// $listBcc = array(
-  	// 		'fikaralbaba@gmail.com', 'inikotakan@gmail.com'
-  	// 	);
-  	// $this->email->bcc($listBcc);
+  	$listBcc = array(
+  			'fikaralbaba@gmail.com', 'inikotakan@gmail.com'
+  		);
+  	$this->email->bcc($listBcc);
   	
   	$this->email->subject('Kotakan: Informasi Pemesanan '.$params['no_pesanan']);
   	$sqlOrder = "SELECT
