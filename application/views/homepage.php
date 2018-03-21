@@ -6,11 +6,15 @@
                 <div class="col-sx-12 text-left" style="color:#ffffff;padding-left: 20px;">
                     <h3>Indonesian Foodbox Marketplace</h3>
                     <p style="color:#ffffff;"> Platform Marketplace FoodBox & Kuliner Pertama di Indonesia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
-                    <ul class="list-inline social">
-                        <li><h1 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h1></li>
-                        <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
-                        <li><h2 href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></h2></li>
-                    </ul>
+                    <div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
+                            <ul class="list-inline social">
+                                <li><a href="http://fb.com/inikotakan"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://instagram.com/inikotakan"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6282337576338&text=Halo%20Admin%20Saya%20Mau%20Order%20Kotakan"><i class="fa fa-whatsapp"></i></a></li>
+                            </ul>
+                            </br>
+                            </br>
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,10 +120,10 @@
                         4 => 'katering'
                     );
                 foreach($list_menu as $data): ?>
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-2.5 col-sm-3">
                     <div class="item-box">
                         <div class="item-media entry">
-                            <img src="<?= $data->gambar ?>" style="height: 200px" alt="" class="img-responsive" />
+                            <img src="<?= $data->gambar ?>" style="height: 273.25px" alt="" class="img-responsive" />
                             <div class="magnifier">
                                 <div class="item-author">
                                     <a href="<?= base_url().'menu/'.$categorySlug[$data->id_kategori] ?>"><span class="<?php echo $categoryIcon[$data->id_kategori] ?>"></span>&nbsp; <?= $data->nama_kategori ?></a>
@@ -140,9 +144,9 @@
           <div class="item-media text-center">
             <div id="slider" class="flexslider clearfix">
                 <ul class="slides">
-                    <li><img src="<?= base_url() ?>resources/images/konten01.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/konten02.jpg" alt="" class="img-responsive"></li>
-                    <li><img src="<?= base_url() ?>resources/images/konten03.jpg" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten-01.png" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten-02.png" alt="" class="img-responsive"></li>
+                    <li><img src="<?= base_url() ?>resources/images/konten-03.png" alt="" class="img-responsive"></li>
                 </ul>
             </div>
         </div><!-- end item-media -->

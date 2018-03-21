@@ -55,7 +55,7 @@
                         <div class="navbar-table">
                             <div class="navbar-cell">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="<?= base_url() ?>"><img src="<?= base_url() ?>resources/images/icon2.jpg" alt="" class="img-responsive"></a>
+                                    <a class="navbar-brand" style="padding-top: 5px;" href="<?= base_url() ?>"><img src="<?= base_url() ?>resources/images/logo.png" alt="" class="img-responsive"></a>
                                     <div class="open-menu">
                                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                                             <span class="sr-only">Toggle navigation</span>
