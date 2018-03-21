@@ -1,34 +1,29 @@
 <section class="section single-wrap">
     <div class="container">
-        <div class="page-title">
+        <div class="page-title public-profile-title">
             <div class="row">
-                <div class="col-sx-12 text-center">
-                    <h3>Kotakan Indonesia</h3>
-                    <div class="bread">
-                        <ol class="breadcrumb">
-                         <p style="color:#ffffff"> Platform Marketplace FoodBox Pertama di Indonesia bahkan di Dunia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
-                         <a href="#" class="followbtn" color:#ffffff>Pilihan Menu</a> <span>-</span> <a href="#" class="followbtn">Cara Pemesanan</a> <span>-</span> <a href="#" class="followbtn">Daftar Menjadi Vendor</a>
-                        </ol>
-                    </div>
+                <div class="col-sx-12 text-left" style="color:#ffffff;padding-left: 20px;">
+                    <h3>Indonesian Foodbox Marketplace</h3>
+                    <p style="color:#ffffff;"> Platform Marketplace FoodBox & Kuliner Pertama di Indonesia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
+                    <ul class="list-inline social">
+                        <li><h1 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h1></li>
+                        <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
+                        <li><h2 href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></h2></li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="content-top">
+
+        <!--div class="content-top">
             <div class="row">
                 <div class="col-sx-6 col-sm-6">
                     <!-- <div class="custommenu hidden-xs">
                         <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="<?= base_url() ?>resources/upload/fav.png" alt=""></a>
                     </div> -->
-                </div> 
+                
 
-                <div class="col-sm-12 col-xs-12 cen-xs text-center">
-                    <ul class="list-inline social">
-                        <li><h2 href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></h2></li>
-                        <li><h2 href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></h2></li>
-                        <li><h2 href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></h2></li>
-                    </ul>
-                </div>
+               
             </div><!-- end row -->
         </div><!-- end content top -->
 
@@ -72,12 +67,11 @@
                     </br>
                     </br>
                    
-                    <div class="general-title">
-                    <center><h4><strong>Layanan Kami</strong></h4>  <hr></center>
-                        
-                    </div><!-- end title -->
+            <div class="general-title">
+            <center><h4><strong>Layanan Kami</strong></h4>  <hr></center>
+            </div><!-- end title -->
 
-                </br>
+            </br>
             </br> 
             <div class="refer-messages">
             <div class="row text-center">
