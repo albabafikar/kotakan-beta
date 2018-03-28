@@ -69,7 +69,7 @@
               <div class="col-md-3 col-sm-6">
                   <div class="item-box">
                       <div class="item-media entry">
-                          <img src="<?= $data->gambar ?>" style="height: 200px" alt="" class="img-responsive" />
+                          <img src="<?= $data->gambar ?>" style="height: 100%" alt="" class="img-responsive" />
                           <div class="magnifier">
                               <div class="item-author">
                                   <a href="<?= base_url().'menu/'.$categorySlug[$data->id_kategori] ?>"><span class="<?php echo $categoryIcon[$data->id_kategori] ?>"></span>&nbsp; <?= $data->nama_kategori ?></a>

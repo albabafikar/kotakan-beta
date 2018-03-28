@@ -123,7 +123,7 @@
                 <div class="col-md-2.5 col-sm-3">
                     <div class="item-box">
                         <div class="item-media entry">
-                            <img src="<?= $data->gambar ?>" style="height: 273.25px" alt="" class="img-responsive" />
+                            <img src="<?= $data->gambar ?>" style="height: 100%" alt="" class="img-responsive" />
                             <div class="magnifier">
                                 <div class="item-author">
                                     <a href="<?= base_url().'menu/'.$categorySlug[$data->id_kategori] ?>"><span class="<?php echo $categoryIcon[$data->id_kategori] ?>"></span>&nbsp; <?= $data->nama_kategori ?></a>
@@ -179,7 +179,7 @@
                         <a href="<?= base_url() ?>order?form=coffeebreak" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div><!-- end col -->
-                <div class="col-md-3">
+                <div class="col-md-3" style="padding-right: 0px;">
                     <div class="boxes boxs">
                         <i class="fa fa-cutlery"></i>
                         <h3>Paket Katering Prasmanan</h3>

@@ -20,9 +20,10 @@
                     </div>
                 </div> -->
               <div class="col-sx-12 text-center">
-                <img src="<?= base_url() ?>resources/images/avatar.jpg" alt="" class="img-circle">
-                  <h3>Menu</span></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus, tellus vel ullamcorper fermentum, <br/>velit nibh molestie velit, vitae feugiat leo lorem eget tellus. Nam vehicula cursus fermentum.</p>
+                <!--img src="<?= base_url() ?>resources/images/avatar.jpg" alt="" class="img-circle"-->
+                  <h3>Daftar Menu</span></h3>
+                  <p>Berikut adalah semua menu yang ada di kotakan.id
+                  </br>Silahkan dipilih sesuai dengan kebutuhan konsumsi acara anda ... </p>
                   <ul class="list-inline social">
                       <li><a href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></a></li>
                       <li><a href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></a></li>
@@ -94,7 +95,7 @@
               <div class="col-md-3 col-sm-6">
                   <div class="item-box">
                       <div class="item-media entry">
-                          <img src="<?= $data->gambar ?>" style="height: 200px" alt="" class="img-responsive" />
+                          <img src="<?= $data->gambar ?>" style="height: 100%" alt="" class="img-responsive" />
                           <div class="magnifier">
                               <div class="item-author">
                                   <a href="<?= base_url().'menu/'.$categorySlug[$data->id_kategori] ?>"><span class="<?php echo $categoryIcon[$data->id_kategori] ?>"></span>&nbsp; <?= $data->nama_kategori ?></a>

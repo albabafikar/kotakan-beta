@@ -12,21 +12,24 @@
 
     <!-- SITE META -->
     <title>Kotakan.id | Indonesian Foodbox Marketplace</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Platform Marketplace FoodBox & Kuliner Pertama di Indonesia yang menjembatani antara produsen foodbox 'kotakan' dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa 'kotakan'. Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.">
+    <meta name="author" content="Komal Indonesia | @fikaralbaba">
+    <meta name="keywords" content="inikotakan, pesan kotakan malang, kotakanmalang, malang, indonesia, pesan nasi kotak malang, pesan coffee break malang, pesan snack malang, jasa nasi kotak malang, jasa snackbox malang, pesan katering malang, jasa katering malang, pesan kotakan">
+    <meta property="og:url" content="https://www.kotakan.id/" />
+	<meta property="og:site_name" content="Kotakan Indonesia" />
+	<meta property="og:title" content="Platform Marketplace FoodBox & Kuliner Pertama di Indonesia" />
+	<meta property="og:description" content="Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan." />
 
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="<?= base_url() ?>resources/images/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="<?= base_url() ?>resources/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>resources/images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>resources/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>resources/images/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>resources/images/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>resources/images/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>resources/images/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>resources/images/apple-touch-icon-152x152.png">
-
+    <link rel="apple-touch-icon" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>resources/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>resources/images/favicon.png">
     <!-- TEMPLATE STYLES -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>resources/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>resources/css/bootstrap.css">

@@ -86,6 +86,11 @@
                                               <img src="<?= $dataMenu->gambar ?>" alt="Sedang Loading..." class="img-responsive">
                                           </div>
                                         </div>
+
+                                        <div class="col-md-12 col-xs-12">
+                                              <label>Jumlah Pemesanan</label>
+                                              <label><big><?= $dataMenu->nama ?></big></label>
+                                          </div>
                                         <?php else: ?>
                                         <!-- Form Snack, Coffee, Catering -->
                                         <div class="form-group" id="listItem">
