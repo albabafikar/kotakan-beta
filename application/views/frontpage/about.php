@@ -239,23 +239,32 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="general-title">
-                                <h4>Terbaru dari Kotakan.id</h4>
+                                <h4>Kabar Kotakan</h4>
                                 <hr>
                             </div><!-- end title -->
 
                             <div class="text-widget">
                                 <p>Ikuti informasi terbaru tentang Kotakan.id melalui blog dan laman media sosial kami Facebook, Instagram dan Sosial Media Lainnya.</p>
+                                <div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
+                            <ul class="list-inline social">
+                                <li><a href="http://fb.com/inikotakan"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://instagram.com/inikotakan"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6282337576338&text=Halo%20Admin%20Saya%20Mau%20Order%20Kotakan"><i class="fa fa-whatsapp"></i></a></li>
+                            </ul>
+                            </br>
+                            </br>
+                            </div>
                             </div><!-- end text-widget -->
                         </div><!-- end col -->
 
                         <div class="col-sm-6">
                             <div class="general-title">
-                                <h4>Mencari Rekan Kerja</h4>
+                                <h4>Mencari Next Ranger "Kotakan"</h4>
                                 <hr>
                             </div><!-- end title -->
 
                             <div class="text-widget">
-                                <p>Punya tujuan yang sama untuk meningkatkan value produk kuliner "Kotakan" Indonesia? Yuk gabung dengan kotakan Indonesia demi mewujudkan pemerataan ekonomi di Indonesia. <a href="#">Cek Info Kerja Disini ...</a></p>
+                                <p>Punya tujuan yang sama untuk meningkatkan value produk kuliner "Kotakan" Indonesia? Yuk gabung dengan kotakan Indonesia demi mewujudkan pemerataan ekonomi di Indonesia. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfa5V0KU7X2Fki4yUXBfyzjYYALUuVnIiHauCGDO9kgYNRR7Q/viewform">Daftar Jadi Ranger !</a></p>
                             </div><!-- end text-widget -->
                         </div><!-- end col -->
                     </div><!-- end row -->
@@ -278,7 +287,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <h2>Lebih dari 50 Partner produk kotakan telah berkolaborasi bersama .. <br>Sekarang saatnya anda bergabung dengan kami...</h2>
-                    <a href="<?= $this->kotakanPartner ?>" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
+                    <a href="http://bit.ly/temankotakan" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end content message -->

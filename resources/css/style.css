@@ -2450,7 +2450,7 @@ form[role="login"] > div {
         padding: 10px 10px 10px 5px;
     }
     .single-wrap .page-title h3 {
-        padding-left: 5px;
+        padding-bottom: 10px;
         font-size: 24px;
     }
 
@@ -2469,7 +2469,7 @@ form[role="login"] > div {
     }
     .cen-xs,
     .text-right.cen-xs {
-        text-align: center !important;
+        text-align: left !important
         float: none;
     }
     body.bundle li.dropdown.membermenu a.dropdown-toggle:focus,

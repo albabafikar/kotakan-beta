@@ -14,25 +14,7 @@
             </div>
         </div>
 
-        <div class="content-top">
-            <div class="row">
-                <div class="col-sx-6 col-sm-6">
-                    <div class="custommenu hidden-xs">
-                        <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="upload/fav.png" alt=""></a>
-                    </div>
-                </div> 
-                <center>
-                 <div class="col-sm-6 col-xs-12 cen-xs text-right">
-                    <ul class="list-inline social">
-                        <li><h2 href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></h2></li>
-                        <li><h2 href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></h2></li>
-                        <li><h2 href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></h2></li>
-                    </ul>
-                </div>
-                </center>
-            </div><!-- end row -->
-            </div><!-- end row -->
-        </div><!-- end content top -->
+        
 
         <div class="content boxs">
             <div class="row">
@@ -44,7 +26,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
                             <div class="general-title">
-                                <h4>Contact Form</h4>
+                                <h4>Ada Kritik Saran Buat Kotakan ?</h4>
                                 <hr>
                             </div><!-- end title -->
 

@@ -20,18 +20,20 @@
                     </div>
                 </div> -->
               <div class="col-sx-12 text-center">
-                <img src="<?= base_url() ?>resources/images/avatar.jpg" alt="" class="img-circle">
+            
                   <h3>Pilihan Menu <span style="color: #ded2d2;"><?= $changeLabel[$label] ?></span></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus, tellus vel ullamcorper fermentum, <br/>velit nibh molestie velit, vitae feugiat leo lorem eget tellus. Nam vehicula cursus fermentum.</p>
+                  <p> Berikut adalah daftar pilihan menu yang ada di kotakan.id Produk dari #TemanKotakan. </br>Silahkan dipilih sesuai dengan kebutuhan konsumsi acara anda.</p>
                   <ul class="list-inline social">
                       <li><a href="<?= @$this->facebook ?>"><i class="fa fa-facebook"></i></a></li>
                       <li><a href="<?= @$this->instagram ?>"><i class="fa fa-instagram"></i></a></li>
                       <li><a href="<?= @$this->whatsapp ?>"><i class="fa fa-whatsapp"></i></a></li>
                   </ul>
+                  </br>
+                  </br>
               </div>
             </div>
         </div>
-
+</div>
         <div class="content-before">
             <div class="row">
                 <div class="col-md-12 col-sx-12 cen-xs">
@@ -50,6 +52,8 @@
                 </div>
             </div><!-- end row -->
         </div><!-- end content before -->
+      
+        
         <div class="content">
             <div class="row">
               <?php 
@@ -83,6 +87,7 @@
               <?php endforeach; ?>
             </div><!-- end row -->
         </div><!-- end content -->
+    
 
         <div class="content-after text-center boxs">
             <div class="row">
@@ -107,12 +112,13 @@
                 </div>
             </div><!-- end row -->
         </div><!-- end content after -->
+    
 
         <div class="content-message boxs">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <h2>Lebih dari 50 Partner produk kotakan telah berkolaborasi bersama .. <br>Sekarang saatnya anda bergabung dengan kami...</h2>
-                    <a href="<?= $this->kotakanPartner ?>" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
+                    <a href="http://bit.ly/temankotakan" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end content message -->

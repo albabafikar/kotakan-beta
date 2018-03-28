@@ -5,13 +5,18 @@
             <div class="row">
                 <div class="col-sx-12 text-left" style="color:#ffffff;padding-left: 20px;">
                     <h3>Indonesian Foodbox Marketplace</h3>
-                    <p style="color:#ffffff;"> Platform Marketplace FoodBox & Kuliner Pertama di Indonesia yang menjembatani antara produsen foodbox "kotakan" dengan pelanggan / customer yang memiliki acara atau kegiatan yang membutuhkan konsumsi berupa "kotakan". Layanan kami adalah menyediakan produk berupa nasi kotak, snack kotak, coffee break dan katering prasmanan yang dapat dipesan sewaktu-waktu sesuai dengan kebutuhan pelanggan.</p>
+                    <h4 style="color:#ffffff;"> Butuh kotakan ? Ya ... @inikotakan !! </h4>
+                  
+                    <a style="color:#ffffff">Marketplace Foodbox "Kotakan" Konsumsi pertama di Indonesia yang menghubungkan produsen #TemanKotakan dengan customer / pemilik acara #MitraKotakan. </a>
+                    </br>
+                    </br>
                     <div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
                             <ul class="list-inline social">
                                 <li><a href="http://fb.com/inikotakan"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="http://instagram.com/inikotakan"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://api.whatsapp.com/send?phone=6282337576338&text=Halo%20Admin%20Saya%20Mau%20Order%20Kotakan"><i class="fa fa-whatsapp"></i></a></li>
                             </ul>
+                            </br>
                             </br>
                             </br>
                     </div>
@@ -246,7 +251,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <h2>Lebih dari 50 Partner produk kotakan telah berkolaborasi bersama .. <br>Sekarang saatnya anda bergabung dengan kami...</h2>
-                    <a href="#" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
+                    <a href="http://bit.ly/temankotakan" class="btn btn-default btn-lg">Daftar Jadi Partner Kotakan</a>
                 </div>
             </div><!-- end row -->
         </div><!-- end content message -->

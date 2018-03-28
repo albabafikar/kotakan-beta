@@ -4,7 +4,7 @@
                     <div class="col-md-6 col-lg-5">
                         <div class="media cen-xs">
                             <p>
-                                &copy; Kotakan Indonesia 2018 - All Rights Reserverd.<br>
+                                &copy; Kotakan Indonesia 2018 - All Rights Reserved | Beta Version.<br>
                                 Idea by <a class="madeby" href="http://komaldev.com">@fikaralbaba @komalindonesia</a> made with <i class="fa fa-heart"></i></a>
                             </p>
                         </div>
