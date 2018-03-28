@@ -196,7 +196,7 @@
         <div class="stores boxs">
             <div class="row">
                 <div class="col-md-12 general-title">
-                    <h4>Promo &amp; Info Terbaru <span class="hidden-xs"><a href="#">View all</a></span></h4>
+                    <h4>Promo &amp; Info Terbaru <span class="hidden-xs"><a href="<?= base_url() ?>blog" title="Blog &amp; Promo">View all</a></span></h4>
                     <hr>
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -210,7 +210,7 @@
                                     <img alt="" class="img-responsive img-thumbnail" src="<?= base_url() ?>resources/images/promo.jpg">
                                 </div>
                                 <div class="col-sm-8 col-xs-12">
-                                    <h4><a href="public-profile.html">Promo Gratis Ongkir Sampai 15 Maret 2018</a></h4>
+                                    <h4><a href="public-profile.html">Promo Gratis Ongkir Sampai 30 April 2018</a></h4>
                                     <ul>
                                         <li><a href="#"><i class="fa fa-envelope-o"></i> Yuk masukkan kode promo dalam form pesanan kotakan anda !</a></li>
                                     
