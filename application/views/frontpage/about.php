@@ -150,19 +150,19 @@
             </div>
             </br>
 
-                    <!--div class="general-title">
+                    <div class="general-title">
                     <center><h4><strong>Tim Kerja Kami</strong></h4>  <hr></center>
                         </br>
                         </br>
                         
                     </div><!-- end title -->
-                    <!--div class="row">
+                    <div class="row">
                         <div class="col-sm-3">
                             <div class="team-image">
                                 <img src="<?= base_url() ?>resources/upload/team_01.jpg" alt="" class="img-responsive">
                             </div>
                         </div><!-- end col -->
-                        <!--div class="col-sm-3">
+                        <div class="col-sm-3">
                             <div class="team-desc">
                                 <h4>John DOE</h4>
                                 <small>Founder CEO</small>
@@ -171,12 +171,12 @@
                             </div>
                         </div><!-- end col -->
 
-                        <!--div class="col-sm-3">
+                        <div class="col-sm-3">
                             <div class="team-image">
                                 <img src="<?= base_url() ?>resources/upload/team_02.jpg" alt="" class="img-responsive">
                             </div>
                         </div><!-- end col -->
-                        <!--div class="col-sm-3">
+                        <div class="col-sm-3">
                             <div class="team-desc">
                                 <h4>Jenny DOE</h4>
                                 <small>Founder CEO</small>
@@ -186,7 +186,7 @@
                         </div>
                     </div><!-- end row -->
 
-                    <!--hr class="invis">
+                    <hr class="invis">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="team-image">
@@ -219,23 +219,6 @@
                     <hr class="invis">
                     
                     
-                    <div class="row"> 
-                        <div class="col-sm-3">
-                            <div class="team-image">
-                            <img src="<?= base_url() ?>resources/upload/team_05.jpg" alt="" class="img-responsive">
-                            </div>
-                        </div><!-- end col -->
-                        <!--div class="col-sm-3">
-                            <div class="team-desc">
-                                <h4>Thomsan FIYNACE</h4>
-                                <small>Finance Manager</small>
-                                <p>Thomsan said we are good in sust wrap the first character of the paragraph in a span, then target the span wiyle away.</p>
-                                <a href="#"><i class="fa fa-linkedin"></i> @Thomsan</a>
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                    </center>
-                   
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="general-title">
@@ -245,7 +228,7 @@
 
                             <div class="text-widget">
                                 <p>Ikuti informasi terbaru tentang Kotakan.id melalui blog dan laman media sosial kami Facebook, Instagram dan Sosial Media Lainnya.</p>
-                                <div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
+                                <div class="col-xs-12 text-center" style="font-size: 20px;">
                             <ul class="list-inline social">
                                 <li><a href="http://fb.com/inikotakan"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="http://instagram.com/inikotakan"><i class="fa fa-instagram"></i></a></li>
@@ -271,6 +254,7 @@
                 
             </br>
         </div><!-- end content -->
+            
         
 
         <!--div class="item-media text-center">

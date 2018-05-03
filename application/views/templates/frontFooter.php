@@ -122,18 +122,26 @@
     })(jQuery);
     </script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5a53171f4b401e45400be716/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+    <!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+6282337576338", // WhatsApp number
+            email: "inikotakan@gmail.com", // Email
+            sms: "+6282337576338", // Sms phone number
+            company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+            greeting_message: "Hai .. \nKamu bisa pesan kotakan langsung disini loh .. ", // Text of greeting message
+            call_to_action: "Pesan Tanpa Ribet ...", // Call to action
+            button_color: "#932C8B", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,email,sms", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
-    </script>
-    <!--End of Tawk.to Script-->
+</script>
+<!-- /WhatsHelp.io widget -->
 </body>
 </html>

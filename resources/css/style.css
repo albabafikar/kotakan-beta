@@ -1029,7 +1029,7 @@ a {
 }
 
 .item-box {
-    text-align: center;
+    text-align: left;
     display: block;
     overflow: hidden;
     position: relative;
@@ -2469,7 +2469,7 @@ form[role="login"] > div {
     }
     .cen-xs,
     .text-right.cen-xs {
-        text-align: left !important
+        text-align: left !important;
         float: none;
     }
     body.bundle li.dropdown.membermenu a.dropdown-toggle:focus,

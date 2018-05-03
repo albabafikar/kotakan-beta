@@ -6,34 +6,28 @@
                 <div class="col-sx-12 text-left" style="color:#ffffff;padding-left: 20px;">
                     <h3>Indonesian Foodbox Marketplace</h3>
                     <h4 style="color:#ffffff;"> Butuh kotakan ? Ya ... @inikotakan !! </h4>
-                  
                     <a style="color:#ffffff">Marketplace Foodbox "Kotakan" Konsumsi pertama di Indonesia yang menghubungkan produsen #TemanKotakan dengan customer / pemilik acara #MitraKotakan. </a>
                     </br>
                     </br>
-                    <div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
+                    <a href="http://instagram.com/inikotakan" class="btn btn-primary">PROMO TERBARU</a> &nbsp; <a href="https://api.whatsapp.com/send?phone=6282337576338&text=Halo%20Admin%20Saya%20Mau%20Order%20Kotakan%20Cepat" class="btn btn-primary">BUTUH PESAN SEGERA !</a>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    
+                    <!--div class="col-xs-6 cen-xs text-left" style="padding-left: 0px; font-size: 20px;">
                             <ul class="list-inline social">
                                 <li><a href="http://fb.com/inikotakan"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="http://instagram.com/inikotakan"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://api.whatsapp.com/send?phone=6282337576338&text=Halo%20Admin%20Saya%20Mau%20Order%20Kotakan"><i class="fa fa-whatsapp"></i></a></li>
                             </ul>
-                            </br>
-                            </br>
-                            </br>
-                    </div>
+                            
+                    </div-->
                 </div>
             </div>
         </div>
 
-        <!--div class="content-top">
-            <div class="row">
-                <div class="col-sm-12 col-xs-12 cen-xs text-left">
-                    <ul class="list-inline social">
-                        <li><h2 href="<?= @$this->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></h2></li>
-                        <li><h2 href="<?= @$this->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></h2></li>
-                        <li><h2 href="<?= @$this->whatsapp ?>" target="_blank"><i class="fa fa-whatsapp"></i></h2></li>
-                    </ul>
-                </div>
-            </div><!-- end row -->
+        
         </div><!-- end content top -->
 
       
@@ -146,7 +140,7 @@
         </br>
         
 
-          <div class="item-media text-center">
+        <div class="item-media text-center">
             <div id="slider" class="flexslider clearfix">
                 <ul class="slides">
                     <li><img src="<?= base_url() ?>resources/images/konten-01.png" alt="" class="img-responsive"></li>
@@ -215,11 +209,11 @@
                                     <img alt="" class="img-responsive img-thumbnail" src="<?= base_url() ?>resources/images/promo.jpg">
                                 </div>
                                 <div class="col-sm-8 col-xs-12">
-                                    <h4><a href="public-profile.html">Promo Gratis Ongkir Sampai 30 April 2018</a></h4>
+                                    <h4><a href="public-profile.html">Promo Gratis Ongkir Diperpanjang Sampai 30 Mei 2018</a></h4>
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-envelope-o"></i> Yuk masukkan kode promo dalam form pesanan kotakan anda !</a></li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i> Yuk Pesan Kotakan Sesuai kebutuhan Anda ... !</a></li>
                                     
-                                        <li><a href="single-item.html"><i class="fa fa-shopping-cart"></i> Minimal Pemesanan 100 Kotakan all item</a></li>
+                                        <li><a href="single-item.html"><i class="fa fa-shopping-cart"></i> Minimal Pemesanan 30 Kotakan all item</a></li>
                                         <li><i class="fa fa-map-marker"></i> Area Malang Raya</li>
                                     </ul>
                                 </div>
@@ -232,12 +226,12 @@
                                         <li><a href="single-item.html" class="screenshot" data-gal="<?= base_url() ?>resources/upload//item_05.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="<?= base_url() ?>resources/upload//item_05.jpg" alt=""></a></li>
                                     </ul>
                                 </div><!-- end col -->
-                                <div class="col-sm-4 col-xs-12 text-center">
+                                <!--div class="col-sm-4 col-xs-12 text-center">
                                     <ul>
                                         <li><center><a href="#" class="btn btn-primary btn-block">Kode Promo : #PROMOKOTAKAN</a></center></li>
                                         
                                     </ul>
-                                </div>
+                                </div-->
                             </div><!-- end form-group -->   
                         </div>
                     </div>
@@ -245,7 +239,7 @@
             </div><!-- end r0w -->
         </div><!-- end stores -->
 
-   
+
       
         <div class="content-message boxs">
             <div class="row">
